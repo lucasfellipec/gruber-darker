@@ -25,13 +25,13 @@ local DEFAULTS = {
 		visual = false,
 	},
 	italic = {
-		strings = true,
-		comments = true,
+		strings = false,
+		comments = false,
 		operators = false,
-		folds = true,
+		folds = false,
 	},
-	undercurl = true,
-	underline = true,
+	undercurl = false,
+	underline = false,
 }
 
 ---@class ConfigMgr

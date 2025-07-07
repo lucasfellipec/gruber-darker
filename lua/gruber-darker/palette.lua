@@ -4,7 +4,7 @@ local M = {}
 ---@type table<string, Color>
 M = {
 	none = Color.none(),
-	fg = Color.new(0xe4e4e4),
+	fg = Color.new(0xe4e4ef),
 	["fg+1"] = Color.new(0xf4f4ff),
 	["fg+2"] = Color.new(0xf5f5f5),
 	white = Color.new(0xffffff),
@@ -18,7 +18,7 @@ M = {
 	["red-1"] = Color.new(0xc73c3f),
 	red = Color.new(0xf43841),
 	["red+1"] = Color.new(0xff4f58),
-	green = Color.new(0x73d936),
+	green = Color.new(0x73c936),
 	yellow = Color.new(0xffdd33),
 	brown = Color.new(0xcc8c3c),
 	quartz = Color.new(0x95a99f),

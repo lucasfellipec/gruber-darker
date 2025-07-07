@@ -22,7 +22,7 @@ end
 -- Misc
 
 ---Line and block comments
-M.highlights.comment = Highlight.new("@comment", { link = vim_hl.comment })
+M.highlights.comment = Highlight.new("@comment", { link = gruber_hl.brown })
 ---Comments documenting code
 M.highlights.comment_documentation = Highlight.new("@comment.documentation", { link = gruber_hl.green, italic = opts.italic.comments })
 M.highlights.comment_luadoc = Highlight.new("@comment.luadoc", { link = M.highlights.comment_documentation })
@@ -31,9 +31,9 @@ M.highlights.error = Highlight.new("@error", {})
 ---Completely disable the highlight
 M.highlights.none = Highlight.new("@none", { fg = c.none, bg = c.none })
 ---Various preprocessor directives & shebangs
-M.highlights.pre_proc = Highlight.new("@preproc", { link = vim_hl.pre_proc })
+M.highlights.pre_proc = Highlight.new("@preproc", { link = gruber_hl.quartz })
 ---Preprocessor definition directives
-M.highlights.define = Highlight.new("@define", { link = vim_hl.define })
+M.highlights.define = Highlight.new("@define", { link = gruber_hl.quartz })
 ---Symbolic operators (e.g. `+` / `*`)
 M.highlights.operator = Highlight.new("@operator", { link = vim_hl.operator })
 
@@ -42,7 +42,7 @@ M.highlights.operator = Highlight.new("@operator", { link = vim_hl.operator })
 ---Delimiters (e.g. `;` / `.` / `,`)
 M.highlights.punctuation_delimiter = Highlight.new("@punctuation.delimiter", { link = vim_hl.delimiter })
 ---Brackets (e.g. `()` / `{}` / `[]`)
-M.highlights.punctuation_bracket = Highlight.new("@punctuation.bracket", { link = gruber_hl.wisteria })
+M.highlights.punctuation_bracket = Highlight.new("@punctuation.bracket", { link = gruber_hl.white })
 ---Special symbols (e.g. `{}` in string interpolation)
 M.highlights.punctuation_special = Highlight.new("@punctuation.special", { link = gruber_hl.brown })
 
@@ -55,26 +55,26 @@ M.highlights.string_documentation = Highlight.new("@string.documentation", { lin
 ---Regular expressions
 M.highlights.string_regex = Highlight.new("@string.regex", { link = vim_hl.constant })
 ---Escape sequences
-M.highlights.string_escape = Highlight.new("@string.escape", { link = vim_hl.constant })
+M.highlights.string_escape = Highlight.new("@string.escape", { link = gruber_hl.green })
 ---Other special strings (e.g dates)
 M.highlights.string_special = Highlight.new("@string.special", { link = vim_hl.constant })
 
 ---Character literals
-M.highlights.character = Highlight.new("@character", { link = vim_hl.character })
+M.highlights.character = Highlight.new("@character", { link = gruber_hl.white })
 ---Special characters (e.g. wildcards)
 M.highlights.character_special = Highlight.new("@character.special", { link = vim_hl.constant })
 
 ---Boolean literals
-M.highlights.boolean = Highlight.new("@boolean", { link = vim_hl.boolean })
+M.highlights.boolean = Highlight.new("@boolean", { link = gruber_hl.white })
 ---Numeric literals
-M.highlights.number = Highlight.new("@number", { link = vim_hl.number })
+M.highlights.number = Highlight.new("@number", { link = gruber_hl.white })
 ---Floating-point number literals
-M.highlights.float = Highlight.new("@float", { link = vim_hl.float })
+M.highlights.float = Highlight.new("@float", { link = gruber_hl.white })
 
 -- Functions
 
 ---Function definitions
-M.highlights.func = Highlight.new("@function", { link = vim_hl.func })
+M.highlights.func = Highlight.new("@function", { link = gruber_hl.white })
 ---Built-in functions
 M.highlights.func_builtin = Highlight.new("@function.builtin", { link = gruber_hl.yellow })
 ---Function calls
@@ -96,12 +96,16 @@ M.highlights.parameter = Highlight.new("@parameter", { link = vim_hl.identifier 
 
 ---various keywords
 M.highlights.keyword = Highlight.new("@keyword", { link = vim_hl.keyword })
+
+M.highlights.keyword_import = Highlight.new("@keyword.import", { link = gruber_hl.quartz })
+
+M.highlights.keyword_directive = Highlight.new("@keyword.directive", { link = gruber_hl.quartz })
 ---keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
 -- M.highlights.keyword_coroutine = Highlight.new("@keyword.coroutine", {})
 ---keywords that define a function (e.g. `func` in Go, `def` in Python)
 -- M.highlights.keyword_function = Highlight.new("@keyword.function", {})
 ---operators that are English words (e.g. `and` / `or`)
--- M.highlights.keyword_operator = Highlight.new("@keyword.operator", {})
+M.highlights.keyword_operator = Highlight.new("@keyword.operator", { link = gruber_hl.yellow_bold })
 ---keywords like `return` and `yield`
 -- M.highlights.keyword_return = Highlight.new("@keyword.return", {})
 
@@ -117,16 +121,16 @@ M.highlights.debug = Highlight.new("@debug", { link = vim_hl.debug })
 ---GOTO and other labels (e.g. `label:` in C)
 M.highlights.label = Highlight.new("@label", { link = vim_hl.label })
 ---keywords for including modules (e.g. `import` / `from` in Python)
--- M.highlights.include = Highlight.new("@include", {})
+-- M.highlights.include = Highlight.new("@include", { link = gruber_hl.quartz })
 ---keywords related to exceptions (e.g. `throw` / `catch`)
 -- M.highlights.exception = Highlight.new("@exception", {})
 
 -- Types
 
 ---type or class definitions and annotations
-M.highlights.type = Highlight.new("@type", { link = vim_hl.type })
+M.highlights.type = Highlight.new("@type", { link = gruber_hl.white })
 ---built-in types
-M.highlights.type_builtin = Highlight.new("@type.builtin", { link = gruber_hl.yellow })
+M.highlights.type_builtin = Highlight.new("@type.builtin", { link = gruber_hl.quartz })
 ---type definitions (e.g. `typedef` in C)
 M.highlights.type_definition = Highlight.new("@type.definition", { link = vim_hl.typedef })
 ---type qualifiers (e.g. `const`)
@@ -154,7 +158,7 @@ M.highlights.constant = Highlight.new("@constant", { link = vim_hl.constant })
 ---built-in constant values
 M.highlights.constant_builtin = Highlight.new("@constant.builtin", { link = gruber_hl.yellow })
 ---constants defined by the preprocessor
-M.highlights.constant_macro = Highlight.new("@constant.macro", { link = vim_hl.define })
+M.highlights.constant_macro = Highlight.new("@constant.macro", { link = gruber_hl.yellow_bold })
 
 ---modules or namespaces
 -- M.highlights.namespace = Highlight.new("@namespace", {})

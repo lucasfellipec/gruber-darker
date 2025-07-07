@@ -230,7 +230,7 @@ M.highlights.debug = Highlight.new("Debug", { link = gruber_hl.fg2 })
 ---(preferred) text that stands out, HTML links
 M.highlights.underlined = Highlight.new("Underlined", { fg = c.wisteria, underline = opts.underline })
 M.highlights.bold = Highlight.new("Bold", { bold = opts.bold })
-M.highlights.italic = Highlight.new("Italic", { italic = true })
+M.highlights.italic = Highlight.new("Italic", { italic = false })
 ---("Ignore", below, may be invisible...)
 ---Ignore = Highlight.new("Ignore", { }) ---(preferred) left blank, hidden  |hl-Ignore|
 
@@ -247,9 +247,9 @@ M.highlights.md_code_block = Highlight.new("markdownCodeBlock", { fg = c.green }
 ---markdownH1 = Highlight.new("markdownH1", { fg = c.magenta, bold = true })
 ---markdownH2 = Highlight.new("markdownH2", { fg = c.blue, bold = true })
 ---markdownLinkText = Highlight.new("markdownLinkText", { fg = c.blue, underline = true })
-M.highlights.md_italic = Highlight.new("markdownItalic", { fg = c.wisteria, italic = true })
+-- M.highlights.md_italic = Highlight.new("markdownItalic", { fg = c.wisteria, italic = false })
 M.highlights.md_bold = Highlight.new("markdownBold", { link = gruber_hl.yellow_bold })
-M.highlights.md_code_delim = Highlight.new("markdownCodeDelimiter", { fg = c.brown, italic = true })
+M.highlights.md_code_delim = Highlight.new("markdownCodeDelimiter", { fg = c.brown, italic = false })
 M.highlights.md_error = Highlight.new("markdownError", { fg = c.fg, bg = c["bg+1"] })
 
 return M
