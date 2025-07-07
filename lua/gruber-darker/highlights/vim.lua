@@ -157,7 +157,7 @@ M.highlights.visual_nos = Highlight.new("VisualNOS", { link = gruber_hl.red })
 ---Warning messages
 M.highlights.warning_msg = Highlight.new("WarningMsg", { link = gruber_hl.red })
 ---"nbsp", "space", "tab" and "trail" in 'listchars'
-M.highlights.whitespace = Highlight.new("Whitespace", { fg = c["bg+4"], bg = c.none })
+M.highlights.whitespace = Highlight.new("Whitespace", { fg = c["bg+1"], bg = c.none })
 ---Current match in 'wildmenu' completion
 M.highlights.wild_menu = Highlight.new("WildMenu", { fg = c.black, bg = c.yellow })
 ---These groups are not listed as vim groups,
